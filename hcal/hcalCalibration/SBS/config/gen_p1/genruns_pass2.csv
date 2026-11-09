@@ -1,0 +1,9 @@
+sbsconfig,runnum,target,sbsmagcurr(A),bbmagcurr(A),ebeam_mean(GeV),ebeam_std(GeV),totcharge(C),hcal_v_offset,rootfile_dir,tdc_timestamp,tdc_calibration_constant,adct_timestamp,hcal_energy_timestamp
+2,2033,he3,2100,750,4.291,0,0.05,0.00E+00,/lustre24/expphy/volatile/halla/sbs/vimukthi/GEn/He3/rootfiles,--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],-------[ 2021-10-24 04:30:00 ]
+2,2034,he3,2100,750,4.291,0,0.05,0.00E+00,/lustre24/expphy/volatile/halla/sbs/vimukthi/GEn/He3/rootfiles,--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],-------[ 2021-10-24 04:30:00 ]
+2,2035,he3,2100,750,4.291,0,0.05,0.00E+00,/lustre24/expphy/volatile/halla/sbs/vimukthi/GEn/He3/rootfiles,--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],-------[ 2021-10-24 04:30:00 ]
+2,2036,he3,2100,750,4.291,0,0.05,0.00E+00,/lustre24/expphy/volatile/halla/sbs/vimukthi/GEn/He3/rootfiles,--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],-------[ 2021-10-24 04:30:00 ]
+2,2037,he3,2100,750,4.291,0,0.05,0.00E+00,/lustre24/expphy/volatile/halla/sbs/vimukthi/GEn/He3/rootfiles,--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],-------[ 2021-10-24 04:30:00 ]
+2,2038,he3,2100,750,4.291,0,0.05,0.00E+00,/lustre24/expphy/volatile/halla/sbs/vimukthi/GEn/He3/rootfiles,--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],-------[ 2021-10-24 04:30:00 ]
+2,2039,he3,2100,750,4.291,0,0.05,0.00E+00,/lustre24/expphy/volatile/halla/sbs/vimukthi/GEn/He3/rootfiles,--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],--------[ 2022-10-17 00:00:00 ],-------[ 2021-10-24 04:30:00 ]
+

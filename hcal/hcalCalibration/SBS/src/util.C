@@ -95,13 +95,15 @@ namespace util {
       bool read_param = false;
       bool found_tstamp = false;
 
-      if( timestamp.compare("none")==0 )
+      if( timestamp.compare("none")==0 ){
+	cout<<"here none == 0"<<endl;
 	found_tstamp = true;
+      }
 
       while( getline( const_file, readline ) ){
-
+	//cout<<"got the line, in the while loop"<<endl;
 	if( n0==hcal::maxHCalChan ){
-	  	  
+	  cout<<"limit reached"<<endl;	  
 	  const_file.close();
 	  return;
 	}
@@ -109,11 +111,13 @@ namespace util {
 	TString Tline = (TString)readline;
   
 	if( Tline.BeginsWith(timestamp) && !found_tstamp ){
+	  cout<<"time stamp found"<<endl;
 	  found_tstamp = true;
 	  continue;
 	}
 
 	if( Tline.BeginsWith(type) && !read_param && found_tstamp ){
+	  //cout<<"here"<<endl;
 	  read_param = true;
 	  continue;
 	}
@@ -404,10 +408,12 @@ namespace util {
 	  temp_cc.SetDataCutSheet(temp);
 	  ccut.push_back(temp_cc);
 	  max_pushback = true;
+	  cout<<"got to the loop"<<endl;
 	}
 
 	temp.clear();
       }
+      std::cout<<"DEBUG"<<endl;
       //Update nruns with total no. of runs to analyze
       if (verbose == 1) {
 	std::cout << "First cut info:" << std::endl << ccut[0];
@@ -418,6 +424,7 @@ namespace util {
       throw;
     }
     cut_data.close();
+    std::cout<<"DEBUG 1"<<endl;
   }
 
 

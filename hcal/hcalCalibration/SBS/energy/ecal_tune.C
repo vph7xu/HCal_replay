@@ -52,11 +52,11 @@ void ecal( const char *experiment = "gmn", Int_t config = 4, bool qreplay = fals
   std::string h2opt = "";
   if( h2only )
     h2opt = "_lh2only";
-  std::string outdir_path = gSystem->Getenv("OUT_DIR");
-  std::string ecal_path = outdir_path + Form("/hcal_calibrations/pass%d/energy/ecal%s_%s_conf%d_qr%d_pass%d.root",pass,h2opt.c_str(),experiment,config,(Int_t)qreplay,pass);
+  std::string outdir_path = "/work/halla/sbs/vimukthi/HCal_replay/hcal";// gSystem->Getenv("OUT_DIR");
+  std::string ecal_path = outdir_path + Form("/hcalCalibration/SBS/energy/ecal%s_%s_conf%d_qr%d_pass%d.root",h2opt.c_str(),experiment,config,(Int_t)qreplay,pass);;
 
   if(altpath)
-    ecal_path = outdir_path + Form("/hcal_calibrations/pass%d/energy/ecal_newclus_%s_%s_conf%d_qr%d_pass%d.root",pass,h2opt.c_str(),experiment,config,(Int_t)qreplay,pass);
+    ecal_path = outdir_path + Form("/hcalCalibration/SBS/energy/ecal_newclus_%s_%s_conf%d_qr%d_pass%d.root",h2opt.c_str(),experiment,config,(Int_t)qreplay,pass);
 
   //Set up path variables and output files
   string db_path = gSystem->Getenv("DB_DIR");

@@ -26,7 +26,7 @@
 //#include <bits/stdc++.h>
 
 //Main.
-void hcalE_mc( const char *experiment = "gmn", Int_t config=9 ){
+void hcalE_mc( const char *experiment = "gen", Int_t config=3 ){
 
   // Define a clock to check macro processing time
   TStopwatch *st = new TStopwatch();
@@ -38,9 +38,11 @@ void hcalE_mc( const char *experiment = "gmn", Int_t config=9 ){
   TChain *C = new TChain("T");
 
   //set up paths and variables, first set from simulations 032123, second set from 091523
-  std::string outdir_path = gSystem->Getenv("OUT_DIR");
-  std::string mc_data_path = Form("/lustre19/expphy/volatile/halla/sbs/seeds/sim091523/%s_sbs%d*",experiment,config);
-  std::string mc_fout_path = outdir_path + Form("/hcal_calibrations/MC/hcalE_mc_class_%s_conf%d.root",experiment,config);
+  //std::string outdir_path = gSystem->Getenv("OUT_DIR");
+  //std::string mc_data_path = Form("/lustre19/expphy/volatile/halla/sbs/seeds/sim091523/%s_sbs%d*",experiment,config);
+  std::string mc_data_path = Form("/lustre24/expphy/volatile/halla/sbs/vimukthi/MC/GEN%d_H2/GEN%d_H2_elastic*",config,config);
+  //std::string mc_fout_path = outdir_path + Form("/hcal_calibrations/MC/hcalE_mc_class_%s_conf%d.root",experiment,config);
+  std::string mc_fout_path = Form("./hcalE_mc_class_%s_conf%d.root",experiment,config);
 
   // Declare outfile
   TFile *fout = new TFile( mc_fout_path.c_str(), "RECREATE" );

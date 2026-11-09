@@ -16,7 +16,7 @@ const Int_t maxBlk = 25;
 const Int_t maxTrack = 1000;
 
 //MAIN
-void hydrogen_cut_diagnostic( const char *experiment = "gmn", Int_t kine=7, Int_t pass=2, bool verb=false )
+void hydrogen_cut_diagnostic( const char *experiment = "gen", Int_t kine=3, Int_t pass=1, bool verb=false )
 {   
 
   // Define a clock to check macro processing time
@@ -28,7 +28,7 @@ void hydrogen_cut_diagnostic( const char *experiment = "gmn", Int_t kine=7, Int_
     pass=1;
 
   // Get information from .csv files
-  std::string struct_dir = Form("../config/%s/",experiment); //unique to my environment for now
+  std::string struct_dir = Form("../config/%s_p%d/",experiment,pass); //unique to my environment for now
   Int_t nruns = -1; //Analyze all available runs for this configuration
 
   //read the run list to parse run numbers associated to input parameters and set up for loop over runs
@@ -36,8 +36,8 @@ void hydrogen_cut_diagnostic( const char *experiment = "gmn", Int_t kine=7, Int_
   util::ReadRunList(struct_dir,experiment,nruns,kine,pass,verb,runs); //nruns=-1 modifies nruns to loop over all available
 
   // outfile path
-  std::string out_dir = gSystem->Getenv("OUT_DIR");
-  std::string out_path = out_dir + Form("/hcal_calibrations/pass%d/diagnostics/caldiag_%s_sbs%d_pass%d.root",pass,experiment,kine,pass);
+  std::string out_dir = "/work/halla/sbs/vimukthi/HCal_replay/hcal";//gSystem->Getenv("OUT_DIR");
+  std::string out_path = out_dir + Form("/hcal_calibrations/SBS/energy/diagnostics/caldiag_%s_sbs%d_pass%d.root",experiment,kine,pass);
 
   //set up output files
   TFile *fout = new TFile( out_path.c_str(), "RECREATE" );
